@@ -6,7 +6,7 @@
 ![HTML Badge](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created during the React Immersion provided by AlgaWorks.
 
 ## Available Scripts
 

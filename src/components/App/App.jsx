@@ -11,7 +11,7 @@ function App(){
 
     const colors = ['#62CBC6', '#00ABAD', '#00858C', '#006073', '#004D61']
 
-    const [products, setProducts] = useState(productMocks.products)
+    const [products, setProducts] = useState(productMocks.products.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)))
     const [selectedProducts, setSelectedProducts] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
 
@@ -56,30 +56,30 @@ function App(){
                         right={
                             <div>
                                 <LineChart 
-                                    title={"Healthy"} 
+                                    title={"Vegetables"} 
                                     color={colors[0]}  
                                     percentage={
-                                            extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('healthy')).length)
+                                            extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('vegetables')).length)
                                         }
                                 /> 
                                 <LineChart 
-                                    title={"Junk"} 
+                                    title={"Drinks"} 
                                     color={colors[1]}  
                                     percentage={
-                                        extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('junk')).length)
+                                        extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('drinks')).length)
                                     }
                                 /> 
                                 <LineChart 
-                                    title={"Cleaning"} 
+                                    title={"Meats"} 
                                     color={colors[2]} 
                                     percentage={
-                                        extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('cleaning')).length)
+                                        extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('meats')).length)
                                     } />
                                 <LineChart 
-                                    title={"Others"} 
+                                    title={"Snacks"} 
                                     color={colors[3]} 
                                     percentage={
-                                        extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('others')).length)
+                                        extractPercentage(selectedProducts.length, selectedProducts.filter(sp => sp.tags.includes('snacks')).length)
                                     } />
 
                         <       div style={{ marginTop: 12 }}>
